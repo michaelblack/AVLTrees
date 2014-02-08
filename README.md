@@ -7,7 +7,7 @@ The Tester.hs file contains a program to view incremental changes in a tree usin
 
 A sample of the Tester program
 ------------------------------
-|```
+```
 Open example.gv with GraphViz and use the following commands to interact with it:
 d item	- deletes an item from the tree
 i item	- inserts an item in the tree
