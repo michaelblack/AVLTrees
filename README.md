@@ -17,7 +17,8 @@ r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
 q	- quits
 
 >>=
-``` ![an empty tree](Screenshots/t1.png "An empty tree.")
+```
+![an empty tree](Screenshots/t1.png "An empty tree.")
 
 ```
 Open example.gv with GraphViz and use the following commands to interact with it:
