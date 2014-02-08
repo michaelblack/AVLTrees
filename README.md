@@ -18,12 +18,12 @@ q	- quits
 
 >>=
 ```
-![an empty tree](tree/master/Screenshots/t1.png "An empty tree.")
+![an empty tree](./Screenshots/t1.png "An empty tree.")
 
 ```
 >>= r 1 10
 ```
-![an enumerated tree](tree/master/Screenshots/t2.png "An eumerated tree.")
+![an enumerated tree](./Screenshots/t2.png "An eumerated tree.")
 
 ```
 Open example.gv with GraphViz and use the following commands to interact with it:
