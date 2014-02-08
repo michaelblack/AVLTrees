@@ -33,7 +33,7 @@ q	- quits
 ```
 >>= i 11
 ```
-![t4](./Screenshots/t3.png "t4")
+![t4](./Screenshots/t4.png "t4")
 
 ```
 >>= d 8
