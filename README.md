@@ -17,20 +17,13 @@ r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
 q	- quits
 
 >>=
-```| ![an empty tree](Screenshots/t1.png "An empty tree.") |
+```
+![an empty tree](tree/master/Screenshots/t1.png "An empty tree.")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
 >>= r 1 10
->>=
 ```
+![an enumerated tree](tree/master/Screenshots/t2.png "An eumerated tree.")
 
 ```
 Open example.gv with GraphViz and use the following commands to interact with it:
