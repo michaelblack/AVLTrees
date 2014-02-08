@@ -5,8 +5,8 @@ Included is an implementation of AVL Trees in Haskell.
 
 The Tester.hs file contains a program to view incremental changes in a tree using GraphViz.
 
-A sample of the Tester program
-------------------------------
+A sample output of the Tester program `./Tester example.gv`
+-----------------------------------------------------------
 ```
 Open example.gv with GraphViz and use the following commands to interact with it:
 d item	- deletes an item from the tree
@@ -18,107 +18,38 @@ q	- quits
 
 >>=
 ```
-![an empty tree](./Screenshots/t1.png "An empty tree.")
+![t1](./Screenshots/t1.png "t1")
 
 ```
 >>= r 1 10
 ```
-![an enumerated tree](./Screenshots/t2.png "An eumerated tree.")
+![t2](./Screenshots/t2.png "t2")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
->>= r 1 10
 >>= i 13
->>=
 ```
+![t3](./Screenshots/t3.png "t3")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
->>= r 1 10
->>= i 13  
 >>= i 11
->>=
 ```
+![t4](./Screenshots/t3.png "t4")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
->>= r 1 10
->>= i 13  
->>= i 11
 >>= d 8
->>=
 ```
+![t5](./Screenshots/t5.png "t5")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
->>= r 1 10
->>= i 13  
->>= i 11
->>= d 8
 >>= b
->>=
 ```
+![t4](./Screenshots/t3.png "t4")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
->>= r 1 10
->>= i 13  
->>= i 11
->>= d 8
->>= b
 >>= f
->>=
 ```
+![t5](./Screenshots/t5.png "t5")
 
 ```
-Open example.gv with GraphViz and use the following commands to interact with it:
-d item	- deletes an item from the tree
-i item	- inserts an item in the tree
-f	- goes forward in the history
-b	- goes back in the history
-r a b	- creates a tree with elements in the range a...b (e.g. r 3 9)
-q	- quits
-
->>= r 1 10
->>= i 13  
->>= i 11
->>= d 8
->>= b
->>= f
 >>= q
 ```
