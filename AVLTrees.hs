@@ -1,4 +1,4 @@
-module AVLTrees (AVLTree(Empty), height, makeLeaf, isEmpty, infold, postfold, prefold, dotFormat, find, insert, delete) where
+module AVLTrees (AVLTree(Empty), height, makeLeaf, isEmpty, infold, postfold, prefold, dotFormat, find, insert, delete, filter) where
 
 data AVLTree a = AVLTree {levels :: Int,
                           value :: a,
@@ -21,7 +21,7 @@ makeTree x Empty r     = AVLTree (height r + 1) x Empty r
 makeTree x l r         = AVLTree (max (height l) (height r) + 1) x l r
 
 makeLeaf :: a -> AVLTree a
-makeLeaf x = AVLTree 1 x Empty Empty
+makeLeaf x =  makeTree x Empty Empty
 
 isEmpty :: AVLTree a -> Bool
 isEmpty Empty = True
@@ -53,6 +53,12 @@ prefold f acc (AVLTree _ x l r) = f x (prefold f (prefold f acc r) l)
 treemap :: (Ord a, Ord b) => (a -> b) -> AVLTree a -> AVLTree b
 treemap f Empty = Empty
 treemap f tree = infold (\ acc x -> insert acc (f x)) Empty tree
+
+treefilter :: (Ord a, Ord b) => (a -> Bool) -> AVLTree a -> AVLTree a
+treefiter p = prefold filterer Empty
+  where filterer acc x = if p x
+                         then insert acc x
+                         else acc
 
 dotFormat :: (Show a) => String -> AVLTree a -> String
 dotFormat name tree = "digraph "++name++" {\ngraph [ordering=\"out\"]\n" ++ (connections "" tree) ++ "}"
@@ -107,6 +113,5 @@ delete tree x | x < value tree = rebalance $ makeTree (value tree) (delete (left
         extractLargestChild (AVLTree _ x l Empty) = (l, x)
         extractLargestChild (AVLTree _ x l r)     = let (nr, i) = extractLargestChild r 
                                                     in (makeTree x l nr, i)
-
 
 
