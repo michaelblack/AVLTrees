@@ -5,9 +5,10 @@ Included is an implementation of AVL Trees in Haskell.
 
 The Tester.hs file contains a program to view incremental changes in a tree using GraphViz.
 
-A sample output of the Tester program `./Tester example.gv`
+A sample output of the Tester program
 -----------------------------------------------------------
 ```
+$ ./Tester example.gv
 Open example.gv with GraphViz and use the following commands to interact with it:
 d item	- deletes an item from the tree
 i item	- inserts an item in the tree

@@ -56,7 +56,7 @@ treemap f tree = infold (\ acc x -> insert acc (f x)) Empty tree
 
 dotFormat :: (Show a) => String -> AVLTree a -> String
 dotFormat name tree = "digraph "++name++" {\ngraph [ordering=\"out\"]\n" ++ (connections "" tree) ++ "}"
-  where connections _ Empty = ""
+  where connections _ Empty = "null [shape=point];\n"
         connections nulls (AVLTree _ x Empty Empty) = show x ++ " -> " ++ makeNull (nulls++"L") ++ ";\n" ++
                                                       show x ++ " -> " ++ makeNull (nulls++"R")  ++ ";\n"
         connections nulls (AVLTree _ x l Empty) = show x ++ " -> " ++ show (value l) ++ ";\n" ++
