@@ -5,7 +5,8 @@ Included is an implementation of AVL Trees in Haskell.
 
 The Tester.hs file contains a program to view incremental changes in a tree using GraphViz.
 
-In addition to insert and delete as demonstrated below, the tree supposts the folling functions: `height`, `makeLeaf`, `isEmpty`, `infold`, `postfold`, `prefold`, and `find`
+In addition to insert and delete as demonstrated below, the tree supposts the following functions:
+ `height`, `makeLeaf`, `isEmpty`, `infold`, `postfold`, `prefold`, and `find`
 
 A sample output of the Tester program
 -----------------------------------------------------------
