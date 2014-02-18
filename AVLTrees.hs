@@ -1,4 +1,4 @@
-module AVLTrees (AVLTree(Empty), height, makeLeaf, isEmpty, infold, postfold, prefold, dotFormat, find, insert, delete, filter) where
+module AVLTrees (AVLTree(Empty), height, makeLeaf, isEmpty, infold, postfold, prefold, treemap, treefilter, dotFormat, find, insert, delete) where
 
 data AVLTree a = AVLTree {levels :: Int,
                           value :: a,
@@ -54,11 +54,11 @@ treemap :: (Ord a, Ord b) => (a -> b) -> AVLTree a -> AVLTree b
 treemap f Empty = Empty
 treemap f tree = infold (\ acc x -> insert acc (f x)) Empty tree
 
-treefilter :: (Ord a, Ord b) => (a -> Bool) -> AVLTree a -> AVLTree a
-treefiter p = prefold filterer Empty
-  where filterer acc x = if p x
+treefilter :: (Ord a) => (a -> Bool) -> AVLTree a -> AVLTree a
+treefilter p = prefold filterer Empty 
+  where filterer x acc = if p x
                          then insert acc x
-                         else acc
+                         else acc 
 
 dotFormat :: (Show a) => String -> AVLTree a -> String
 dotFormat name tree = "digraph "++name++" {\ngraph [ordering=\"out\"]\n" ++ (connections "" tree) ++ "}"
