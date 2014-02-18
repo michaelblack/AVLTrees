@@ -7,7 +7,7 @@ The Tester.hs file contains a program to view incremental changes in a tree usin
 
 In addition to insert and delete as demonstrated below, the tree supposts the following functions:
 
- `height`, `makeLeaf`, `isEmpty`, `infold`, `postfold`, `prefold`, `filter`, and `find`
+ `height`, `makeLeaf`, `isEmpty`, `infold`, `postfold`, `prefold`, `treemap`, `treefilter`, and `find`
 
 A sample output of the Tester program
 -----------------------------------------------------------
